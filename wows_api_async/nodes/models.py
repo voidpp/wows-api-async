@@ -37,16 +37,22 @@ class PlayerBattleStatistics(BaseModel):
     control_dropped_points: int = None
 
 
-class PlayerStatistics(BaseModel):
+class AccountStatistics(BaseModel):
     pvp: PlayerBattleStatistics
+
+
+class PlayerStatistics(AccountStatistics):
     last_battle_time: int
     ship_id: int
 
 
-class AccountInfo(BaseModel):
+class BaseAccountInfo(BaseModel):
     account_id: int
     nickname: str
-    statistics: PlayerStatistics = None
+
+
+class AccountInfo(BaseAccountInfo):
+    statistics: AccountStatistics = None
 
 
 class Ship(BaseModel):

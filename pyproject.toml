@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "wows-api-async"
-version = "0.1.0"
-description = ""
+version = "0.1.2"
+description = "async python api for world of warships"
 authors = ["Lajos Santa <santa.lajos@gmail.com>"]
 license = "MIT"
+repository = "https://github.com/voidpp/wows-api-async"
 
 [tool.poetry.dependencies]
 python = "^3.9"
